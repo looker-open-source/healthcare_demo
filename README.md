@@ -12,10 +12,10 @@ Do this if you want to stay up-to-date on changes to the model and do not plan o
 
 #### Advanced Users
 **Option 2) Project import (preferred):**
-Do this if you want to extend the model and make changes within your Looker instance. Existing LookML will still be available to view. Follow these steps.
+Do this if you want to extend the model and make changes within your Looker instance. Existing LookML will still be available to view. Follow these steps [here](https://docs.looker.com/data-modeling/learning-lookml/importing-projects).
 
 **Option 3) Duplicating this repository:**
-Do this if you want to make your own copy of the model to directly modify within your Looker instance. Follow these steps, or download the files here and upload into your own github repository within the UI.
+Do this if you want to make your own copy of the model to directly modify within your Looker instance. Follow these steps, or download the files [here](https://www.nomachetejuggling.com/2011/09/12/moving-one-git-repo-into-another-as-subdirectory/) and upload into your own github repository within the UI.
 
 ## Description
 
