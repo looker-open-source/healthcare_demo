@@ -161,6 +161,29 @@ view: patient {
 
   dimension: name {
     sql: CONCAT(${first_name}, ' ',${last_name}) ;;
+    action: {
+      label: "Email Follow Up to Patient"
+      url: "https://desolate-refuge-53336.herokuapp.com/posts"
+      icon_url: "https://sendgrid.com/favicon.ico"
+      param: {
+        name: "some_auth_code"
+        value: "abc123456"
+      }
+      form_param: {
+        name: "Subject"
+        required: yes
+        default: "Procedure Followup"
+      }
+      form_param: {
+        name: "Body"
+        type: textarea
+        required: yes
+        default:
+        "Dear {{ value }},
+
+        We wanted to followup on your recent procedure to see how you are feeling."
+      }
+    }
   }
 
   dimension: telecom {

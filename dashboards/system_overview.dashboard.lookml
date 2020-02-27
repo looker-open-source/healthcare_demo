@@ -32,7 +32,7 @@
     series_types: {}
     listen:
       Anomaly (# Stand Dev): observation_vitals.anomaly
-    row: 0
+    row: 2
     col: 4
     width: 4
     height: 4
@@ -93,7 +93,7 @@
     listen:
       Anomaly (# Stand Dev): observation_vitals.anomaly
       Date: observation_vitals.issued_year
-    row: 12
+    row: 10
     col: 0
     width: 12
     height: 8
@@ -127,7 +127,7 @@
     series_types: {}
     listen:
       Anomaly (# Stand Dev): observation_vitals.anomaly
-    row: 0
+    row: 2
     col: 8
     width: 4
     height: 4
@@ -230,7 +230,7 @@
     listen:
       Anomaly (# Stand Dev): observation_vitals.anomaly
       Date: observation_vitals.issued_year
-    row: 8
+    row: 6
     col: 0
     width: 12
     height: 4
@@ -329,7 +329,7 @@
     listen:
       Anomaly (# Stand Dev): observation_vitals.anomaly
       Date: observation_vitals.issued_year
-    row: 0
+    row: 2
     col: 12
     width: 12
     height: 8
@@ -396,7 +396,7 @@
     listen:
       Anomaly (# Stand Dev): observation_vitals.anomaly
       Date: observation_vitals.issued_year
-    row: 8
+    row: 10
     col: 12
     width: 12
     height: 8
@@ -413,10 +413,18 @@
     series_types: {}
     refresh: 5 seconds
     listen: {}
-    row: 0
+    row: 2
     col: 0
     width: 4
     height: 4
+  - name: "<span class='fa fa-gears'> Systems Overview</span>"
+    type: text
+    title_text: "<span class='fa fa-gears'> Systems Overview</span>"
+    body_text: ''
+    row: 0
+    col: 0
+    width: 24
+    height: 2
   filters:
   - name: Anomaly (# Stand Dev)
     title: Anomaly (# Stand Dev)

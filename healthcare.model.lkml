@@ -5,14 +5,14 @@ include: "/unnested_views/*.view.lkml"
 include: "/realtime_views/*.view.lkml"
 include: "dashboards/*.dashboard.lookml"
 
-label: "2) Healthcare Demo"
+label: "1) Healthcare Systems and Providers"
 
 
 ############ Simplified View Explores #############
 
 explore: condition_simple {
   view_label: "Condition"
-  label: "Simplified Patient, Encounter & Condition"
+  label: "  Simplified Patient, Encounter & Condition"
   join: patient_simple {
     view_label: "Patient"
     type: left_outer
@@ -181,7 +181,7 @@ explore: organization {
 
 explore: patient {
   hidden: yes
-  label: "Unnested Patient"
+  label: "Patient Details"
   join: patient__address {
     relationship: many_to_one
     sql: LEFT JOIN UNNEST(${patient.address}) as patient__address;;
@@ -234,7 +234,7 @@ explore: encounter_extended {
   extends: [encounter,patient]
   from: encounter
   view_name: encounter
-  label: "Patient & Encounter"
+  label: "Organizations, Practitioners & Encounters"
   join: patient {
     relationship: many_to_one
     sql_on: ${encounter.patient_id} = ${patient.id} ;;
@@ -250,11 +250,11 @@ explore: encounter_extended {
 }
 
 explore: observation_extended {
-  hidden: no
+  hidden: yes
   extends: [observation,encounter_extended]
   from: observation
   view_name: observation
-  label: "Observation & Encounter"
+  label: "Observations"
   join: encounter {
     relationship: many_to_one
     sql_on: ${observation.context__encounter_id} = ${encounter.id} ;;
@@ -263,7 +263,7 @@ explore: observation_extended {
 
 explore: condition_extended {
   hidden: no
-  label: "Condition & Encounter"
+  label: "Diagnoses & Medication Requests"
   extends: [condition,encounter_extended,medication_request]
   from: condition
   view_name: condition
@@ -278,6 +278,7 @@ explore: condition_extended {
 }
 
 explore: observation_vitals {
+  label: "Vitals Monitoring"
   join: patient {
     relationship: many_to_one
     sql_on: ${observation_vitals.patient_id} = ${patient.id} ;;

@@ -4,8 +4,7 @@ This repository contains the BigQuery based LookML, for both the model and dashb
 
 
 ## How to Use
-
-The base dataset is publicly available on BigQuery, the project is referred to as 'hcls-testing-project' and any of the schemas can be used. Alternatively, if you are a Looker employee you can fill out a helpdesk ticket to get access to the modified FHIR dataset in our demo BigQuery instance.
+If you are a Looker partner, please reach out to your analyst for access to dummy data
 
 #### Standard Users
 **Option 1) Cloning from this repository:**
